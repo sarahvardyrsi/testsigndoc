@@ -1,0 +1,29 @@
+type User @model {
+  id: ID!
+  username: String!
+  avatar: S3Object
+}
+
+type Document @model {
+  id: ID!
+  docname: String!
+  docimage: S3Object
+}
+
+type Signature @model {
+  id: ID!
+  username: String!
+  sigimage: S3Object
+}
+
+type SignedDocument @model {
+  id: ID!
+  signdocimage: S3Object
+  username: String!
+}
+
+type S3Object {
+  bucket: String!
+  region: String!
+  key: String!
+}
